@@ -1,0 +1,11 @@
+body {
+    background-image: url('red-popco.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: fantasy;
+    color: #4444;
+    height: 100%;
+    width: 100%;
+}
+
