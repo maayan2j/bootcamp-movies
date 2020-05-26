@@ -2,20 +2,21 @@ class MovieManager {
 
   constructor() {
 
-    this.movieData = []
+    this.movies = []
 
   }
 
-  async getMovieData(title) {
+  async getMovies(title) {
     
     const movie = await $.get(`/movies/${title}`)
-    const isExist = this.movieData.find(t => t.title === title)
+    const isExist = this.movies.find(t => t.title === title)
     if (isExist) {
       return
     }
     else {
-      this.movieData.push(movie)
+      this.movies.push(movie)
     }
+    console.log(this.movies)
   }
 
 }

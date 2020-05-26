@@ -1,11 +1,11 @@
 class Renderer {
-
-    renderData(allMoviesData) {
+    renderData(data) {
         $(".results").empty()
         const source = $('.main').html()
         const template = Handlebars.compile(source)
-        const newHTML = template({ allMoviesData })
+        data = data[0]
+        const newHTML = template({ data} )
+        console.log(data)
         $('.results').append(newHTML)
     }
-
 }

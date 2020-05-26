@@ -9,3 +9,7 @@ body {
     width: 100%;
 }
 
+.movies-container {
+    font-family: cursive;
+    font-size: small;
+}

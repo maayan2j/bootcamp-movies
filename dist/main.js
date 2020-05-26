@@ -12,8 +12,8 @@ const renderer = new Renderer()
 
 async function handleSearch() {
     const movieName = $('#movie').val().trim()
-    await movieManager.getMovieData(movieName)
-    renderer.renderData(movieManager.movieData)
+    await movieManager.getMovies(movieName)
+    renderer.renderData(movieManager.movies)
 }
 
 $('#button').on("click", handleSearch)

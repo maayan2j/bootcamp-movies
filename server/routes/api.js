@@ -13,15 +13,15 @@ router.get('/movies/:title', async function (request, response) {
     console.log(title)
     const data = await urllib.request(`http://www.omdbapi.com/?apikey=a2e2ca53&s=${title}`)
     const movieData = JSON.parse(data.data)
-    //console.log(movieData)
-       const movie = {
-        id : movieData.Search[0].imdbID,
-        title : movieData.Search[0].Title,
-        moviePic : movieData.Search[0].Poster,
-        year : movieData.Search[0].Year
-    }
-    console.log(movie)
-    response.send(movie)
+    console.log(movieData)
+    //    const movie = {
+    //     id : movieData.Search[0].imdbID,
+    //     title : movieData.Search[0].Title,
+    //     moviePic : movieData.Search[0].Poster,
+    //     year : movieData.Search[0].Year
+    // }
+    //console.log(movie)
+    response.send(movieData.Search)
 })
 
 
