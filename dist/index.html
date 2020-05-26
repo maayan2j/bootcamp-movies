@@ -15,6 +15,16 @@
         <button id='button' style="font-family: fantasy;">Search Movie</button><br>
     </div>
 
+    <div class="results"></div>
+    
+    <script class="main" type="text/x-handlebars-template">
+    {{#each allMoviesData}}
+     <div class="movies-container">
+        <div class="movie-title">{{Title}}</div>
+     {{/each}}
+      
+     </script>
+
   
     <script src='/jquery/dist/jquery.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
