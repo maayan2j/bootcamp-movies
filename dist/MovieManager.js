@@ -22,15 +22,15 @@ class MovieManager {
 
 
   async getMoviesFromDB() {
-    const moviesDB = await $.get('/cities')
+    const moviesDB = await $.get('/movies ')
     this.favoriteMovies = moviesDB
   }
 
-  // async saveMovie(movieName) {// 
-  //   //A saveCity method, sends a city's data as POST request to the /city post route on your server
-  //   const cityFromArrayCityData = this.cityData.find(c => c.name == cityName)
-  //   const data = await $.post(`/city`, cityFromArrayCityData)
+  async saveMovie(movieName) {// 
+    
+    const moviesFromFavorites = this.cityData.find(c => m.title == movieName)
+    const data = await $.post(`/movie`, moviesFromFavorites)
 
-  // }
+  }
 
 }
