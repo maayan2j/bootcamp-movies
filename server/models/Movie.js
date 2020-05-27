@@ -3,10 +3,10 @@ const Schema = mongoose.Schema
 
 const movieSchema = new Schema({
 
-    id : Number,
+    id : String,
     title : String,
     moviePic : String,
-    year : Number
+    year : String
 
 })
 
